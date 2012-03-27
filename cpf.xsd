@@ -1,3 +1,5 @@
+<!-- svassallo <vassallosalvatore@gmail.com> 20120327 manage group of eac documents in the mods way -->
+
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   ENCODED ARCHIVAL CONTEXT-CORPORATE BODIES, PERSONS, AND FAMILIES (EAC-CPF) SCHEMA
@@ -63,6 +65,16 @@
 		schemaLocation="http://www.loc.gov/standards/xlink/xlink.xsd"/>
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace"
 		schemaLocation="http://www.w3.org/2007/08/xml.xsd"/>
+		
+    <xs:element name="eac-cpf-collection">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="control"/>
+                <xs:element ref="eac-cpf" minOccurs="2" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute ref="xml:id"/>
+        </xs:complexType>   
+    </xs:element>
 
 	<xs:element name="eac-cpf">
 		<xs:complexType>
